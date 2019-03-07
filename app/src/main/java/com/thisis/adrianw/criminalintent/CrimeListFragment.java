@@ -2,6 +2,7 @@ package com.thisis.adrianw.criminalintent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,8 +58,8 @@ public class CrimeListFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-//                Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId());
                 Intent intent = CrimePagerActivity.newIntent(getActivity(), mCrime.getId());
+                Log.v("CrimeListFragment", "Number:" + mCrime.getId());
                 startActivity(intent);
             }
         }
